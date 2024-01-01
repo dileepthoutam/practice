@@ -73,16 +73,3 @@ func PrintList(head *Node) {
 	}
 	fmt.Println()
 }
-
-func main() {
-
-	var head *Node
-
-	for i := 1; i <= 5; i++ {
-		// head = PushBack(head, rand.Intn(10))
-		head = PushFront(head, i)
-	}
-
-	PrintList(head)
-
-}

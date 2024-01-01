@@ -38,7 +38,3 @@ func IterateOverAMap() {
 
 	fmt.Println(GetAllKeys(sample))
 }
-
-func main() {
-	IterateOverAMap()
-}

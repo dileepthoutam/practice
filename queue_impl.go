@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 )
 
 type Queue struct {
@@ -35,24 +34,4 @@ func (q *Queue) Size() int {
 
 func (q *Queue) Empty() bool {
 	return q.Size() == 0
-}
-
-func main() {
-	queue := &Queue{
-		queue: make([]string, 0),
-	}
-
-	queue.Enqueue("abc")
-	for i := 1; i <= 5; i++ {
-		queue.Enqueue("dileep")
-	}
-
-	fmt.Println(queue)
-
-	err := queue.Dequeue()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println(queue)
 }

@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/text/cases"
-	"golang.org/x/text/language"
 	"sort"
 	"strconv"
 	"strings"
+
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
 func reverseString(s []byte) {
@@ -22,6 +23,8 @@ func reverseString(s []byte) {
 
 func reverse(x int) int {
 	xs := []rune(string(x))
+
+	fmt.Println(xs)
 
 	return -1
 }
@@ -148,9 +151,4 @@ func sortString(input string) string {
 	})
 
 	return string(runes)
-}
-
-func main() {
-
-	fmt.Println(sortString("dileep"))
 }

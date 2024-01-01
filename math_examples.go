@@ -73,8 +73,3 @@ func IfNegative() {
 	fmt.Println(math.Signbit(-5))
 	fmt.Println(math.Signbit(0))
 }
-
-func main() {
-	GetMin(2, 3)
-	GetMax(2, 3)
-}

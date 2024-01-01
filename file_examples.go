@@ -113,8 +113,3 @@ func IsADirectory(filename string) bool {
 
 	return false
 }
-
-func main() {
-	filename := "dsa"
-	fmt.Println(CheckIfExists(filename))
-}

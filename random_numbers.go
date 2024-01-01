@@ -131,7 +131,3 @@ func GenerateARandomString() {
 
 	fmt.Println(output.String())
 }
-
-func main() {
-	GenerateARandomString()
-}
