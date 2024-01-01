@@ -9,6 +9,23 @@ import (
 	"strings"
 )
 
+func reverseString(s []byte) {
+	start := 0
+	end := len(s) - 1
+
+	for start <= end {
+		s[start], s[end] = s[end], s[start]
+		start++
+		end--
+	}
+}
+
+func reverse(x int) int {
+	xs := []rune(string(x))
+
+	return -1
+}
+
 func StringToLowerCase() {
 	str := "diLEep"
 	fmt.Println(strings.ToLower(str))

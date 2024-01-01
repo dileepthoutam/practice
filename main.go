@@ -1,36 +1,46 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func SubArrayWithGivenSum(arr []int, target int) (int, int) {
-	start := 0
-	end := 0
-	sum := 0
-
-	for end < len(arr) {
-		if sum < target {
-			sum += arr[end]
-			end = end + 1
-		} else if sum > target {
-			sum = sum - arr[start]
-			start = start + 1
-		}
-
-		if sum == target {
-			return start, end - 1
+func LinearSearch(arr []int, target int) bool {
+	for _, value := range arr {
+		if value == target {
+			return true
 		}
 	}
 
-	return -1, -1
+	return false
+}
+
+func BinarySearch(arr []int, target int) int {
+	start := 0
+	end := len(arr) - 1
+
+	result := -1
+
+	for start <= end {
+		mid := start + (end - start) / 2
+
+		if target == arr[mid] {
+			result = mid
+			break
+		} else if target < arr[mid] {
+			end = mid - 1
+		} else {
+			start = mid + 1
+		}
+	}
+
+	return result
 }
 
 func main() {
 
-	arr := []int{1, 3, 2, 5, 1, 1, 2, 3}
-	target := 5
+	arr := []int{1, 2, 3, 4, 5}
+	target := 100
 
-	start, end := SubArrayWithGivenSum(arr, target)
-
-	fmt.Println(start, end)
-
+	fmt.Println(LinearSearch(arr, target))
+	
 }
